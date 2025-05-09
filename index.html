@@ -136,9 +136,85 @@
         </a>
 
     </div>
-
-    <a href="" class="floating-button">点击联系客服</a>
-
+        <style>
+            /* 基础样式重置 */
+    
+            /* 右上角链接容器 */
+            .top-links1 {
+                position: absolute;
+                top: 3%;
+                right: 3%;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                max-width: 40%;
+            }
+    
+            /* 右下角链接样式 */
+            .bottom-link1 {
+                position: absolute;
+                bottom: 8%;
+                left: 5%;
+                animation: float1 1s ease-in-out infinite; /* 修改动画名称 */
+            }
+    
+            /* 图片链接通用样式 */
+            .image-link1 {
+                display: block;
+                transition: all 0.3s ease;
+                filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+            }
+    
+            .image-link1 img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+            }
+    
+            /* 悬停效果 */
+            .image-link1:hover {
+                transform: scale(1.05); /* 修改为正确的缩放值 */
+                filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+            }
+    
+            /* 浮动动画 */
+            @keyframes float1 {
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-1000px);
+                }
+            }
+    
+            /* 手机端适配 */
+            @media (max-width: 768px) { /* 修改为正确的媒体查询属性 */
+                .top-links1 {
+                    gap: 10px;
+                    max-width: 60%;
+                }
+                .bottom-link1 {
+                    bottom: 10%;
+                    left: 5%;
+                }
+                .bottom-link1 img {
+                    width: 100px !important;
+                }
+            }
+    
+            @media (min-width: 1200px) {
+                .top-links1 {
+                    gap: 20px;
+                }
+                .image-link1 img {
+                    min-width: 100px;
+                }
+            }
+        </style>
+        <a href="" class="image-link1 bottom-link1" target="_blank">
+            <img src="./images/kefu.png" alt="在线客服！" style="width: 150px;">
+        </a>
 
 
 </body>
