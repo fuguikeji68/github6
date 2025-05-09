@@ -215,7 +215,85 @@
         <a href="" class="image-link1 bottom-link1" target="_blank">
             <img src="./tu/kefu.png" alt="在线客服！" style="width: 150px;">
         </a>
-
+        <style>
+            /* 基础样式重置 */
+    
+            /* 右上角链接容器 */
+            .top-links2 {
+                position: absolute;
+                top: 3%;
+                right: 3%;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                max-width: 40%;
+            }
+    
+            /* 右下角链接样式 */
+            .bottom-link2 {
+                position: absolute;
+                bottom: 8%;
+                right: 85%;
+                animation: float2 1s ease-in-out infinite; /* 修改动画名称 */
+            }
+    
+            /* 图片链接通用样式 */
+            .image-link2 {
+                display: block;
+                transition: all 0.3s ease;
+                filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+            }
+    
+            .image-link2 img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+            }
+    
+            /* 悬停效果 */
+            .image-link2:hover {
+                transform: scale(1.05); /* 修改为正确的缩放值 */
+                filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+            }
+    
+            /* 浮动动画 */
+            @keyframes float2 {
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+    
+            /* 手机端适配 */
+            @media (max-width: 768px) { /* 修改为正确的媒体查询属性 */
+                .top-links2 {
+                    gap: 10px;
+                    max-width: 60%;
+                }
+                .bottom-link2 {
+                    bottom: 65%;
+                    right: 5%;
+                }
+                .bottom-link2 img {
+                    width: 100px !important;
+                }
+            }
+    
+            @media (min-width: 1200px) {
+                .top-links2 {
+                    gap: 20px;
+                }
+                .image-link2 img {
+                    min-width: 100px;
+                }
+            }
+        </style>
+        <a href="" class="image-link2 bottom-link2" target="_blank">
+            <img src="./tu/dj1.jpg" alt="点击" style="width: 150px;">
+        </a>
 
 </body>
 
